@@ -45,6 +45,13 @@ async function run() {
       const service = await serviceCollection.findOne(query);
       res.send(service);
     });
+
+    // POST data in the mongo server
+    app.post("/service", async (req, res) => {
+      const newService = req.body;
+      const result = await serviceCollection.insertOne(newService);
+      res.send(result);
+    });
   } finally {
     // await client.close();
   }
