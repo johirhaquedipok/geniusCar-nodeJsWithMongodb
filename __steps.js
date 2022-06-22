@@ -23,3 +23,10 @@ dotenv
     10
 
 */
+
+/* 
+
+heroku login
+install heroku cli
+
+*/
